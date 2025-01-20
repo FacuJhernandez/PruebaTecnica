@@ -34,7 +34,8 @@ public class SecurityConfig {
         .authorizeHttpRequests(authotize ->
               authotize.requestMatchers("/auth/login").permitAll()
                         .requestMatchers("/swagger-ui/**").permitAll()
-                        .anyRequest().authenticated()
+                        .requestMatchers("/v3/api-docs/**").permitAll()
+                        .anyRequest().permitAll()
         )
         .exceptionHandling(exceptionHandling->exceptionHandling
             .authenticationEntryPoint((request,response,authException)->{
