@@ -1,4 +1,4 @@
-package com.service;
+package com.service.impl;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ import com.model.Auth;
 import com.repository.UserRepository;
 
 @Service
-public class UserServiceAuth implements UserDetailsService{
+public class UserServiceAuthImpl implements UserDetailsService{
 
     @Autowired
     private UserRepository userRepository;

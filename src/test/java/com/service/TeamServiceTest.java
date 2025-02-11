@@ -20,12 +20,13 @@ import com.dto.TeamDTO;
 import com.exception.NoExisteEquipoException;
 import com.model.Team;
 import com.repository.TeamRepository;
+import com.service.impl.TeamServiceImpl;
 
 @SpringBootTest
 public class TeamServiceTest {
 
     @Autowired
-    private TeamService teamService;
+    private TeamServiceImpl teamService;
 
     @MockitoBean
     private TeamRepository teamRepository;

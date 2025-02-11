@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dto.TeamDTO;
 
 import com.exception.RequestInvalidaException;
-import com.service.TeamService;
+import com.service.impl.TeamServiceImpl;
 
 import io.swagger.v3.oas.annotations.Operation;
 
@@ -25,7 +25,7 @@ import io.swagger.v3.oas.annotations.Operation;
 public class TeamController {
     
     @Autowired
-    TeamService teamService;
+    TeamServiceImpl teamService;
 
     @PostMapping("/team")
     @Operation(description = "Crea a un nuevo equipo")

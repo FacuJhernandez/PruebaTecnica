@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dto.UserDTO;
-import com.service.AuthService;
+import com.service.impl.AuthServiceImpl;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -24,7 +24,7 @@ import jakarta.validation.Valid;
 public class AuthController {
     
     @Autowired
-    private AuthService authService;
+    private AuthServiceImpl authService;
     
     @PostMapping("/login")
     @Operation(summary  = "Permite el ingreso de un usuario")
